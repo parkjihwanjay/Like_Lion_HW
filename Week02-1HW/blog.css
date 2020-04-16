@@ -1,0 +1,121 @@
+.text {
+    text-align : center;
+}
+
+body {
+    background-color: wheat;
+}
+
+h1 {
+    text-align : center;
+    color: white;
+}
+
+h2 {
+    font-size: 15px;
+    color: red;
+    text-decoration-line: line-through; 
+    text-align : center;
+
+}
+
+p{
+    text-align: center;
+}
+
+.AboutSNS{
+    height: 900px;
+    width: 500px;
+    padding: 10px;
+    border: 0.0px solid black;
+    box-sizing: border-box;
+    margin : 0 auto;
+    vertical-align: middle
+}
+
+.bus-list {
+    text-align : left;
+}
+
+.bus-lists{
+    font-style: italic;
+}
+
+.pictures{
+    height: 200px;
+    width: 300px;
+    padding: 10px;
+    border: 0.0px solid white;
+    box-sizing: border-box;
+
+}
+
+.SNS_pictures{
+    height: 200px;
+    width: 400px;
+    padding: 10px;
+    border: 0.0px solid black;
+    box-sizing: border-box;
+    margin : 0 auto;
+    vertical-align: middle;
+}
+
+.introduces {
+    margin: 0 auto;
+    text-decoration-color: white;
+    
+
+}
+
+.introduceblog{
+    font-size: 20px;
+}
+
+.Liverpoolpic{
+
+    margin : 0 auto;
+}
+
+
+#Introduce{
+    margin: 0 auto;
+    justify-content: center; 
+    width: 250px;
+    border: 1.0px solid black;
+    
+}
+
+#blog {
+    text-align: middle;
+    text-decoration-color: whitesmoke;
+}
+
+#Selfie{
+    height: 200px;
+    width: 200px;
+    padding:10 px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+#Selfiepic{
+    height:200px;
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Liverpool{
+    text-align: center;
+}
+#checkbox{
+    text-align: center; 
+}
+/* #introduction {
+    
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+} */
