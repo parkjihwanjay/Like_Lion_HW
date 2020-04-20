@@ -1,0 +1,500 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+p{
+    font-size: 15px;
+    
+}
+
+#MH{
+    display: none;
+}
+
+
+.former-head{
+    display:none;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 110%;
+    height: 45px;
+    border-bottom:0.05px solid gray;
+}
+
+.head{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    height: 30px;
+}
+
+.logo{
+    width: 35%;
+}
+.search{
+    display: none;
+}
+
+.Combi{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.body{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.First{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.First-1{
+    width: 30%;
+}
+.First-2{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.First2-1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Name{
+    font-size: 12px;
+}
+
+.profile-edit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 20px;
+    border:1px solid gray;
+}
+
+.material-icons.md-30{
+    font-size: 30px;
+}
+
+.First2-2{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-self{
+    width: 400px;
+}
+
+.Self-intro{
+    font-size: 50px;
+}
+
+.Second
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.Second-1{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-pic{
+    width: 80%;
+    height: auto;
+}
+
+.selfie-pic{
+    width: 30px;
+    height: auto;
+    background-image: "./selfie.jpg";
+    border-radius: 70%;
+}
+
+
+
+.selfie-pic2{
+    width: 100%;
+    height: auto;
+    border-radius: 70%
+}
+.selfie-pic3{
+    width: 100%;
+    height: auto;
+    border-radius: 70%;
+}
+.selfie-pic3.mobile{
+    width: 80%;
+    height: auto;
+    border-radius: 70%;
+}
+
+
+
+
+.placeholder{
+   
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  background-color: white;
+  padding: 0 20px;
+}
+
+.ss{
+    background-image: "./selfie.jpg";
+}
+
+.search-bar{
+    display: hidden;
+    width: 0%;
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons{
+    width: 120px;
+}
+
+.material-icons.md-48{
+    font-size: 25px;
+}
+
+.Fourth{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.Envelope{
+    display: flex;
+    width: 25%;
+    align-content: stretch;
+    align-items: stretch;
+}
+.Pictures{
+    width: 98%;
+    height: 98%;
+
+}
+
+.semi-Third{
+    width: 100%;
+    border-top:1px solid gainsboro;
+    display: flex;
+    justify-content: center;
+}
+.Third{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+.Third-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.Third-2{
+    width: 350px;
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+}
+.material-icons.md-20{
+    font-size: 100px;
+    color: gainsboro;
+}
+.material-icons.md-21{
+    font-size: 100px;
+    color: black;
+}
+
+.icon-intro1{
+    color: black;
+}
+
+.icon-intro{
+    color: gainsboro;
+}
+
+.line1{
+    border-top: 2pt solid black;
+}
+
+@media(min-width:700px){
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+p{
+    font-size: 50px;
+    
+}
+
+
+.former-head{
+    display:flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    border-bottom:2px solid gray;
+}
+
+.head{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    height: 150px;
+}
+
+.body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.First{
+    width: 110%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.First-1{
+    width: 30%;
+}
+.First2{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.First2-1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Name{
+    font-size: 80px;
+}
+
+.profile-edit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 28%;
+    height: 100px;
+    border:3px solid gray;
+}
+
+.material-icons.md-30{
+    font-size: 70px;
+}
+
+.First2-2{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-self{
+    width: 400px;
+}
+
+.Self-intro{
+    font-size: 50px;
+}
+
+.Second
+{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.Second-1{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-pic{
+    width: 350px;
+    height: auto;
+}
+
+.selfie-pic{
+    width: 70px;
+    height: auto;
+    background-image: "./selfie.jpg";
+    border-radius: 70%;
+}
+
+
+
+.selfie-pic2{
+    width: 600px;
+    height: auto;
+    border-radius: 70%
+}
+.selfie-pic3{
+    width: 300px;
+    height: auto;
+    border-radius: 70%
+}
+
+
+
+
+.placeholder{
+   
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  background-color: white;
+  padding: 0 20px;
+}
+
+.ss{
+    background-image: "./selfie.jpg";
+}
+
+.search-bar{
+    width: 150%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons{
+    width: 120px;
+}
+
+.material-icons.md-48{
+    font-size: 70px;
+}
+
+.Fourth{
+    width: 110%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.Envelope{
+    width: 33%;
+}
+.Pictures{
+    width: 90%;
+    height: 90%;
+}
+
+.semi-Third{
+    width: 110%;
+    border-top:3px solid gainsboro;
+    display: flex;
+    justify-content: center;
+}
+.Third{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+.Third-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.Third-2{
+    width: 350px;
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+}
+.material-icons.md-20{
+    font-size: 100px;
+    color: gainsboro;
+}
+.material-icons.md-21{
+    font-size: 100px;
+    color: black;
+}
+
+.icon-intro1{
+    color: black;
+}
+
+.icon-intro{
+    color: gainsboro;
+}
+
+.line1{
+    border-top: 2pt solid black;
+}}
