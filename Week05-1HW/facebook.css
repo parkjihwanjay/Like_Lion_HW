@@ -1,0 +1,302 @@
+@media(max-width: 500px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 5px solid;
+        border-bottom-color: gainsboro;
+    }
+
+    .banner_first_line{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .banner_first_line_pic{
+        width: 40%;
+        height: auto;
+    }
+
+    .banner_first_line_button{
+        width: 60%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .material-icons.md-1
+    {
+        margin: 4px;
+        size: 10px;
+        background-color: gainsboro;
+        border-radius: 70%;
+    }
+    .banner_second_line{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .story{
+        width: 25%;
+        margin: 5px;
+        border-radius: 15%;
+    }
+    
+    .writing{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .writting_first_line{
+        width: 100%;
+        margin: 6px;
+        border: 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .profile{
+        width: 15%;
+        height: auto;
+        border-radius: 70%;
+    }
+
+    .writing_first_line_p{
+        width: 70%;
+        margin: 8px;
+        border: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    .writting_buttons{
+        width: 100%;
+        height: 30px;
+        border-top: 1px solid;
+        border-top-color: gainsboro;
+        border-bottom: 5px solid;
+        border-bottom-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .writing_button{
+        width: 33%;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .red{
+        color: red;
+    }
+
+    .green{
+        color: greenyellow;
+    }
+
+    .pink{
+        color: pink;
+    }
+
+    .contents{
+        width: 100%;
+    }
+    .contents_head{
+        width: 100%;
+        margin: 9px;
+        display: flex;
+        flex-direction:row;
+        justify-content: flex-start;
+        align-items: cneter;
+    }
+    .contents_head_profile{
+        width: 15%;
+        height: auto;
+        border-radius: 70%;
+    }
+    .contents_head_letter{
+        width: 70%;
+        height: aut0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 10px;
+
+    }
+    .contents_head_letter_first_line{
+        font-size: 14px;
+        font-weight: bold;
+        
+    }
+    .contents_head_letter_second_line{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size : 12px;
+        color: gray;
+    }
+    .material-icons.earth{
+        font-size: 12px;
+        color: gray;
+    }
+   
+    .contents_content_p{
+        margin: 2px;
+        width: 100%;
+        margin-top: 8px;
+    }
+    .contents_content_p{
+        border-top: 10px;
+    }
+
+    .contents_content_photo{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .contents_content_photo1{
+        width: 60%;
+        margin: 2px;
+        align-items: stretch;
+        
+    }
+    .contents_content_photo1-1{
+        width: 100%;
+        height: 100%;
+    }
+
+    .contents_content_photo2{
+        width: 30%;
+        margin: 2px;
+    }
+    .contents_content_photo2-1{
+        width: 100%;
+        height: 33%;
+    }
+
+
+    .contents_reputation{
+        margin: 7px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid;
+        border-bottom-color: gainsboro;
+    }
+
+    .contents_reputation_left{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .material-icons.reputation{
+        color: blue;
+        font-size: 15px;
+    }
+
+    .reputation_letter{
+        margin: 3px;
+        font-size: 12px;
+    }
+
+   .contents_reputation_right{
+        width: 70%;  
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .reputation_profile{
+        width: 20px;
+        height: auto;
+        border-radius: 70%;
+    }
+
+    .contents_buttons{
+        width: 100%;
+        margin: 2px;
+        height: 27px;
+        border-bottom: 3px solid;
+        border-bottom-color: gainsboro;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .contents_button_sec{
+        width: 33%;
+        display: flex;
+        flex-direction:  row;
+        justify-content:  center ;
+        align-items: center;
+    }
+
+    .contents_button_letter{
+        color: gray;
+        font-size: 12px;
+        margin: 0px;
+    }
+    #footer {
+
+    position:fixed;
+    bottom: 0;
+    background-color: white;
+    overflow:hidden;
+
+    z-index: 100;
+
+    }
+    .toolbar{
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .blue{
+        color: blue;
+    }
+    .blue-upline{
+        border-top: 2px solid;
+        border-top-color: blue;
+    }
+
+    .dummy{
+        width: 100%;
+        height: 20px;
+    }
+}
