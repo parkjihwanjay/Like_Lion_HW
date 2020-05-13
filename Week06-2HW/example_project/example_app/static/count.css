@@ -1,0 +1,68 @@
+body{
+    background-color: aliceblue;
+}
+.intro{
+    width: 29%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+
+}
+
+h1{
+    width: 29%;
+    justify-content: space-around;
+    font-size:20px;
+    align-items: center;
+
+}
+.submit_align{
+    width: 29.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+.forbox{
+    border: 2px solid;
+    border-color: black;
+    border-radius: 75%;
+}
+
+.information{
+    width: 29.5%;
+    height: 60px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+p{
+    font-size: 10px;
+}
+
+.express_box{
+    font-size: 15px;
+    width: 30%;
+    border: 1px;
+    border-color: black;
+    border-radius: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.submit_align{
+    width: 29.5%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+.count_num{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}

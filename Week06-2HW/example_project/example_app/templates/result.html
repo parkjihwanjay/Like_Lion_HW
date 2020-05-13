@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'result.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class= "intro">
+        자소설 체크용
+        <br>
+    </div>
+    <h1> 전문을 입력해주세요.</h1>
+    <br>
+    <div class = "forbox">
+    <form action = "{% url 'result'%}" method = "POST">{% csrf_token %}
+        <textarea name="text" cols = "60" rows="10">{{just}}</textarea>
+        <br>
+        <div class = "submit_align">
+            <input type= "submit" value = "제출하기">
+        </div>
+    </form>
+    </div>
+    <br>
+    <div class = "information">
+        <div class = "count_num">
+            <p>전체 글자 수 : </p>
+            <div id="answer">
+            {{total_len}}
+            </div>
+        </div>
+        <div class = "count_num_without_blank">
+            <p>여백 없는 글자 수 : </p>
+            <div id ="answer">
+            {{rmv_len}}
+            </div>
+        </div>
+        <div class = "word_num">
+            <p>단어 수 : </p>
+            <div id = "answer">
+            {{word_num}}
+            </div>
+        </div>
+        <br>
+    </div>
+     <br>
+        <div class= "cheer">
+        <p id= "cheerup">
+            좋은 결과 있길 기대합니다.
+        </p>
+        </div>
+
+</body>
+</html>

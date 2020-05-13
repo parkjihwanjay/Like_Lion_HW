@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'count.css' %}"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class= "intro">
+        자소설 체크용
+        <br>
+    </div>
+    <h1> 전문을 입력해주세요</h1>
+    <br>
+    <div class = "for_box">
+    <form action = "{% url 'result'%}" method = "POST">{% csrf_token %}
+        <textarea name="text" cols = "60" rows="10"></textarea>
+        <br>
+        <div class = "submit_align">
+            <input type= "submit" value = "제출하기">
+        </div>
+    </form>
+    </div>
+    <div class = "information">
+        <div class = "count_num express_box">
+            <p>전체 글자 수 : </p>
+        </div>
+        <div class = "count_num_without_blank express_box">
+            <p>여백 없는 글자 수 :   </p>
+        </div>
+        <div class = "word_num express_box">
+            <p>단어 수 : </p>
+        </div>
+
+    </div>
+   
+</body>
+</html>
