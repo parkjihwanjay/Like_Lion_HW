@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>movie</p> <br>
+    {% for article in movie_in_html %}
+        <a href = "{% url 'detail_in_html' article.pk %}">{{article.title}}</a>
+        <br>
+    {% endfor %}
+    <a href="{% url 'new_in_html' %}">글 쓰러가기</a>
+</body>
+</html>
