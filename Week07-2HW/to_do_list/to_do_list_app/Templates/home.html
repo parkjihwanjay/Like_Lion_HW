@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "title">
+    <img src="{% static 'plan.png' %}" alt ="가장 의미없는 것 = 계획" style="width: 200px; height: 200px;">
+
+    </div>
+
+
+    <div class = "contents">
+    {% for post in posts %}
+        {{post.day}}
+        {{post.time}}
+        <a href="{% url 'detail' post.pk %}">{{post.title}}</a>
+        {% for remain in remains %}
+            {% if post.pk == remain.pk %}
+                {{remain.remain_time}} days 남았습니다.
+            {% endif %}
+        {% endfor %}
+        <br>
+    {% endfor %}
+    </div>
+</body>
+</html>

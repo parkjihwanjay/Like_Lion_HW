@@ -1,0 +1,42 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.title{
+    width : 100%;
+    font-size : 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.semi_date{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date{
+    width: 40%;
+}
+
+.content{
+    width: 60%;
+    display: flex;
+    border: 2px solid;
+    border-color: white;
+}
+
+.semibutton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons{
+    width: 40%;
+}

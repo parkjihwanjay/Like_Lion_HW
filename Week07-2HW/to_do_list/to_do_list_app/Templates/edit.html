@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'edit.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action ="" method = POST>
+        {% csrf_token %}
+        <div class = "title_word">
+            {{post.title}} 변경중
+        </div>
+        <div class = "title">
+        <input type = "text" name = "title" placehoder ="제목" value = "{{post.title}}">
+        <input type = "date" name = "day" value = "{{post.day}}">
+        <input type = "time" name = "time" value = "{{post.time}}">
+        </div>
+        <br>
+        <input type = "text" name = "content" value = "{{post.cotent}}" style = "width:420px; height:400px;">
+        <br>
+        <div class ="submit">
+        <button type ="submit"> 수정하기 </button>
+        </div>
+    </form>
+    
+</body>
+</html>
