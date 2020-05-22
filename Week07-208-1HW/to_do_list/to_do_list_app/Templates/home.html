@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends 'base.html' %}
+<br>
+{% block content%}
     {% load static %}
     <link rel = "stylesheet" type="text/css" href="{% static 'home.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     <div class = "title">
     <img src="{% static 'plan.png' %}" alt ="가장 의미없는 것 = 계획" style="width: 200px; height: 200px;">
 
@@ -27,5 +22,4 @@
         <br>
     {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}

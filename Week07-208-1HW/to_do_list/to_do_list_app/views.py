@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Post
-from datetime import date
+from .models import Post, Comment
+from datetime import date, datetime
 
 # Create your views here.
 def home(request):
@@ -22,6 +22,15 @@ def home(request):
 
 def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
+
+    if request.method == "POST":
+        now = datetime.now()
+        Comment.objects.create(
+            post = post,
+            content = request.POST['content'],
+            comment_date = (str(now.year)+"년 "+str(now.month)+"월 "+str(now.day)+"일 "+str(now.hour)+"시 "+str(now.minute)+"분")
+        )
+        return redirect('detail', post_pk)
 
     return render(request, "detail.html", {'post':post})
 
@@ -56,3 +65,8 @@ def delete(request, post_pk):
     post = Post.objects.get(pk = post_pk)
     post.delete()
     return redirect('home')
+
+def delete_comment(request, post_pk, comment_pk):
+    comment = Comment.objects.get(pk=comment_pk)
+    comment.delete()
+    return redirect('detail', post_pk)

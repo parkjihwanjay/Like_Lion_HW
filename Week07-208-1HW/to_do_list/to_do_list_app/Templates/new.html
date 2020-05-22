@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends 'new.html' %}
+{% block content %}
     {% load static %}
-    <link rel = "stylesheet" type="text/css" href="{% static 'new.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <link rel = "stylesheet" type="text/css" href="{% static 'new.css' %}"
     <form action ="" method = POST>
         {% csrf_token %}
         <div class = "title_word">
@@ -25,6 +19,4 @@
         <button type ="submit"> 작성하기 </button>
         </div>
     </form>
-     
-</body>
-</html>
+{% endblock %}
