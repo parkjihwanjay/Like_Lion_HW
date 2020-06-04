@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load static %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'new.css' %}"
+    <form action ="" method = POST>
+        {% csrf_token %}
+        <div class = "title_word">
+            새로 추가 중
+        </div>
+        <div class = "title">
+        <input type = "text" name = "title" placehoder ="제목">
+        <input type = "date" name = "day" value = "2020-05-21">
+        <input type = "time" name = "time">
+        </div>
+        <br>
+        <input type = "text" name = "content" placeholder = 내용 style = "width:420px; height:400px;">
+        <br>
+        <div class = 'submit'>
+        <button type ="submit"> 작성하기 </button>
+        </div>
+    </form>
+{% endblock %}

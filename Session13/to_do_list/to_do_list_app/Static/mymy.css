@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    background-color:antiquewhite;
+}
+
+.home{
+    display: flex;
+    flex-direction:row;
+
+}
+
+.contents{
+    border: 1px solid;
+    border-color: black;
+}

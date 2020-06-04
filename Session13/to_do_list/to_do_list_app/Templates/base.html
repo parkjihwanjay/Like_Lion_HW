@@ -1,0 +1,41 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>{% block title %} 허영범의 To do list {% endblock %}</title>
+</head>
+<body>
+    <div class= "blog-title">
+        허영범의 To do List
+        <br>
+        <div class ="nav-bar">
+            <a class = "nav-item" href= "{% url 'home' %}">HOME</a>
+            {% if user.is_authenticated %}
+            <div class ="nav-item">안녕하세요, {{user.username}} 님</div>
+            <a class = "nav-item" href = "{% url 'logout' %}">로그아웃</a>
+            <a class = "nav-item" href = "{% url 'mymy' %}">내 글 확인</a>
+            {% else %}
+            <a class = "nav-item" href ="{% url 'login' %}">로그인</a>
+            <a href = "{% provider_login_url 'kakao'%}">
+            <img src ="{% static 'kakao.png' %}" alt = "카카오로그인" style ="width : 30px; height: auto;">
+            </a>
+            <a href = "{% provider_login_url 'google'%}">
+            <img src ="{% static 'google.png' %}" alt = "구글로그인"  style ="width: 30px; height:auto;">
+            </a>
+            <a class = "nav-item" href ="{% url 'signup' %}">회원가입</a>
+            {% endif %} 
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

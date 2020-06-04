@@ -18,7 +18,3 @@ class Comment(models.Model):
     content = models.TextField()
     comment_date = models.TextField()
 
-class Picture(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name = 'pictures')
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name = 'pictures')
-    content = models.TextField()

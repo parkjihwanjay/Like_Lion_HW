@@ -1,0 +1,15 @@
+.blog-title{
+    font-size : 50px;
+    font-style: italic;
+}
+.nav-bar{
+    width: 120%;
+    display: flex;
+    justify-content: space-around;
+    font-size :20px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    
+}

@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import Post, Comment, Picture
+from .models import Post, Comment
 from datetime import date, datetime
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
-from .utils import upload_and_save
 
 # Create your views here.
 def home(request):
@@ -26,7 +25,6 @@ def home(request):
 
 def detail(request, post_pk):
     post = Post.objects.get(pk=post_pk)
-    picture = Picture.objects.get(post= post)
 
     if request.method == "POST":
         now = datetime.now()
@@ -38,7 +36,7 @@ def detail(request, post_pk):
         )
         return redirect('detail', post_pk)
 
-    return render(request, "detail.html", {'post':post, 'picture':picture})
+    return render(request, "detail.html", {'post':post})
 
 @login_required(login_url = '/registration/login.html')
 def new(request):
@@ -51,8 +49,6 @@ def new(request):
             time = request.POST["time"],
             author = request.user
         )
-        file_to_upload = request.FILES.get('img')
-        upload_and_save(request, file_to_upload, new_post)
         return redirect('detail', new_post.pk)
 
     return render(request, 'new.html')

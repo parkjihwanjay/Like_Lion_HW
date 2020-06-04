@@ -1,5 +1,5 @@
 """
-WSGI config for file_upload project.
+WSGI config for to_do_list project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'file_upload.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'to_do_list.settings')
 
 application = get_wsgi_application()
