@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "now">
+        00:00
+    </h1>
+    <h2>
+        삐까번쩍!
+    </h2>
+    <script>
+        const body = document.querySelector("body");
+        const clockContent = document.querySelector('.now');
+        const getRandomColor = ()=>{
+            const hexa = '0123456789abcdef';
+            let decidedColor = "#";
+            let randomNumber;
+            for (let i=0;i<6;i++){
+                randomNumber = Math.floor(Math.random()*hexa.length);
+                decidedColor += String(hexa[randomNumber]);
+            }
+            return decidedColor;
+        };
+
+        const getTime = () =>{
+            const date = new Date();
+            const hour = date.getHours();
+            const minute = date.getMinutes();
+            const second = date.getSeconds();
+            clockContent.innerText = `${
+                hour <10 ? `0${hour}` : hour}:${
+                minute < 10 ? `0${minute}`: minute}:${
+                second < 10 ? `0${second}`: second}`
+        };
+        const initTime = ()=> {
+            getTime();
+            setInterval(getTime, 1000);
+        };        
+
+        setInterval(()=>{
+            body.style.background = getRandomColor();
+        },100);
+        initTime();
+
+    </script>
+    
+</body>
+</html>
