@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div>
+    <div>
+      <div>{{ post.title }}</div>
+      <div>{{ post.content }}</div>
+    </div>
+    <a href="{% url 'home' %}">홈으로</a>
+
+    {% if user.is_authenticated and post.author.pk == user.pk %}
+    <a href="{% url 'edit' post.pk %}">수정하기</a>
+    <a href="{% url 'delete' post.pk %}">삭제하기</a>
+    {% endif %}
+
+    {% for comment in post.comments.all %}
+      <li>{{ comment.content }}</li>
+      {% if user.is_authenticated and comment.author.pk == user.pk %}
+      <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="content" placeholder="댓글을 입력하세요">
+      <button type="submit">댓글 쓰기</button>
+    </form>
+
+    <!-- <form method = "POST" action = "{% url 'like' %}">
+      {% csrf_token %}
+      <input type = "hidden" name = "post_pk" value ="{{post.pk}}">
+      <button type = "submit">좋아요</button>
+    </form> -->
+    <button id = "like-button" onclick = "like()" >좋아요</button>
+    {% endif %}
+    <!-- <div>좋아요 {{post.likes.count}} 개</div> -->
+    <div id ="like-count">좋아요{{post.likes.count}}개</div>
+    <button id = "prefer-button" onclick = "prefer()"> 찜했어 </button> 
+  </div>
+  <script>
+  //  function alertLikeButtonClicked() {
+  //    alert('좋아요 버튼을 눌렀습니다');
+  //  }
+    const initialLikeColor = () =>{
+      if ("{{likeColor}}" === "1"){
+      document.getElementById('like-button').style.color = 'red'
+    }}
+    initialLikeColor(); 
+
+    const like = () =>{
+      fetch('/like', {
+        method: "POST",
+        body: JSON.stringify({post_pk: "{{ post.pk }}"})
+      })
+        .then(response => response.json())
+        .then(res => {
+        document.getElementById('like-count').innerHTML = '좋아요'+res.like_count + '개'
+        if (res.like_color !==0) {
+          document.getElementById('like-button').style.color = 'red'
+        } else {
+          document.getElementById('like-button').style.color = 'black'
+        }})
+        .catch(error => console.error(error))
+    }
+    const initialPreferColor = () =>{
+      if ("{{preferColor}}" === "1"){
+      document.getElementById('prefer-button').style.color = 'blue'
+    }}
+    initialPreferColor(); 
+
+    const prefer = () =>{
+      fetch('/prefer', {
+        method: "POST",
+        body: JSON.stringify({post_pk: "{{ post.pk }}"})
+      })
+        .then(response => response.json())
+        .then(res => {
+        if (res.prefer_color !==0) {
+          document.getElementById('prefer-button').style.color = 'blue'
+        } else {
+          document.getElementById('prefer-button').style.color = 'black'
+        }})
+        .catch(error => console.error(error))
+    }
+  </script>
+  
+{% endblock content %}

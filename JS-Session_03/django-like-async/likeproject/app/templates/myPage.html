@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>찜했어요</div>
+  {% for post in prefers %}
+  <div>
+    <ul>
+      <li>
+        <a href="{% url 'detail' post.post.pk %}">{{ post.post }}</a>
+      </li>
+    </ul>
+  </div>
+  {% endfor %}
+<div>좋아해요</div>
+  {% for post in likes %}
+  <div>
+    <ul>
+      <li>
+        <a href="{% url 'detail' post.post.pk %}">{{ post.post }}</a>
+      </li>
+    </ul>
+  </div>
+  {% endfor %}
+{% endblock content %}
